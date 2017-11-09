@@ -10,9 +10,6 @@ L = []
 
 import pygame
 
-pygame.init()
-window = pygame.display.set_mode((grid_size * (w+2),grid_size * (w+2)))
-
 def new_game(w):
 	global flag
 	global black_win
@@ -58,7 +55,7 @@ def new_game(w):
 	window.blit(text, (grid_size * (w+0.1)//2, grid_size * (w+1.45)))
 
 	pygame.display.update()
-new_game(w)
+	game_over = draw_win(black_win,white_win)
 
 def draw_black(mx_w, my_w):
 	if mx_w in range(1,w+2) and my_w in range(1,w+2):
@@ -259,8 +256,9 @@ def draw_win(black_win,white_win):
 
 	if black_win or white_win:
 		return True
-game_over = draw_win(black_win,white_win)
 
+new_game(w)
+game_over = draw_win(black_win,white_win)
 while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
