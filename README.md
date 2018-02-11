@@ -1,5 +1,5 @@
 # Gomoku
-a Gomoku game
+A simple Gomoku game written in python with pygame library.
 
 Rules for Gomoku (http://www.opengames.com.ar/en/rules/Gomoku)
 
