@@ -50,7 +50,7 @@ def new_game(w):
 	window.blit(text, (grid_size * (w-2), 0))
 
 	font = pygame.font.SysFont("Times New Roman", 20)
-	string = "RETACT"
+	string = "RETRACT"
 	text = font.render(string, 1, (255, 255, 255),(0, 0, 0))
 	window.blit(text, (grid_size * (w+0.1)//2, grid_size * (w+1.45)))
 
@@ -87,15 +87,15 @@ def draw_white(mx_w,my_w):
 	else:
 		return False
 
-def retact():
+def retract():
 	global black_win
 	global white_win
 	global game_over
 
 	if len(L) != 0:
-		retact = L.pop()
+		retract = L.pop()
 		
-		Matrix[retact[0]][retact[1]] = 0
+		Matrix[retract[0]][retract[1]] = 0
 		
 		black_win = False
 		white_win = False
@@ -128,7 +128,7 @@ def retact():
 		window.blit(text, (grid_size * (w-2), 0))
 
 		font = pygame.font.SysFont("Times New Roman", 20)
-		string = "RETACT"
+		string = "RETRACT"
 		text = font.render(string, 1, (255, 255, 255),(0, 0, 0))
 		window.blit(text, (grid_size * (w+0.1)//2, grid_size * (w+1.45)))
 
@@ -278,7 +278,7 @@ while True:
 					w=18
 					new_game(w)	#19x19
 				elif x in range(grid_size * (w)//2+grid_size//20,grid_size * (w+4)//2-grid_size//20) and y>grid_size * (w+1.45):
-					flag = retact()
+					flag = retract()
 					game_over = draw_win(black_win,white_win)
 				elif not game_over:
 					if Matrix[my_w-1][mx_w-1] != 0:
