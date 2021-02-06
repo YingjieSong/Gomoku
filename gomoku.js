@@ -168,9 +168,9 @@ function check() {
     // end the game
     if (obj1 != null || obj2 != null || obj3 != null || obj4 != null) {
         gameEnd = true;
-        context.font = '20pt Arial';
+        context.font = `${gridSize/2}pt Arial`;
         context.fillStyle = 'red';
         var text = p1Cur ? "BLACK WIN!" : "WHITE WIN!";
-        context.fillText(text, gridSize * (intersectNum + 1) / 2 - 75, gridSize / 2 + 10);
+        context.fillText(text, gridSize * ((intersectNum + 1) / 2 - 1.9), gridSize * 3 / 4);
     }
 }
