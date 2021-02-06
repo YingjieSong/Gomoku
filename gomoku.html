@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomoku</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #canvas-container {
+            width: 100%;
+            text-align:center;
+            margin: auto;
+        }
+        #canvas {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id='canvas-container'>
+        <canvas id='canvas' onmousedown = 'handleMouseDown(event);'>
+            Canvas not supported
+        </canvas>
+    </div>
+
+    <script src='gomoku.js'></script>
+</body>
+</html>
