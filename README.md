@@ -1,9 +1,9 @@
 # Gomoku
+***Update:*** Rewritten in javascript, click [here](https://yingjiesong.github.io/Gomoku/) to play.
+
 A simple Gomoku game written in python with pygame library.
 
 The original program was written as a practice when I was learning Python.
-
-***Update:*** Rewrite in javascript, click [here](https://yingjiesong.github.io/Gomoku/gomoku.html) to play.
 
 <!--
 ## Screent Shot
@@ -23,4 +23,4 @@ Download the [archive file](https://github.com/YingjieSong/Gomoku/archive/master
 ## Usage
 Navigate to the directory of this project
 
-Run `python3 gomoku-new.py`
+Run `python3 python/gomoku-new.py`
